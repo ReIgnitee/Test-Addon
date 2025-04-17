@@ -16,5 +16,20 @@
 (function() {
     'use strict';
 
-    console.log("Glow addon is active!");
+    //Create a Button Element
+	let Button = document.createElement("Button");
+	Button.innerHTML = "Click Me";
+	Button.style.padding = "10px";
+	Button.style.top = "20px";
+	Button.style.left = "20px";
+	Button.style.position = "fixed";
+	
+	//Appending the Element
+	document.body.appendChild(Button);
+	
+	//Event Listener for the Button
+	Button.addEventListener("click",function({
+		alert("This is your message dear~");
+	}));
+	
 })();
