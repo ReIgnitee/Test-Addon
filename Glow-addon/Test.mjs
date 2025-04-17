@@ -1,28 +1,33 @@
-console.log("[Glow Addon] Core module loaded");
+console.log("[Glow Addon] glow-core.mjs loaded");
 
-const waitForGame = setInterval(() => {
-    if (typeof Player !== "undefined" && document.getElementById("SideMenu")) {
-        clearInterval(waitForGame);
+const waitForLogin = setInterval(() => {
+	if (typeof Player !== "undefined" && document.getElementById("SideMenu")) {
+		clearInterval(waitForLogin);
+		console.log("[Glow Addon] Player is loaded, hooking into Extensions menu");
 
-        const extButton = document.querySelector("button[onclick='DialogExtensionMenuShow()']");
-        if (!extButton) return;
+		// Keep reference to the original builder
+		const oldBuild = window.DialogExtensionMenuBuild;
 
-        const button = document.createElement("button");
-        button.textContent = "Activate Glow";
-        button.style.marginTop = "10px";
-        button.addEventListener("click", () => {
-            alert("Glow activated! ✨");
-        });
+		// Override the build function
+		window.DialogExtensionMenuBuild = function() {
+			oldBuild.call(this); // Call the original build function first
 
-        // Wait for the Extensions dialog to be open before appending
-        const oldFunc = window.DialogExtensionMenuBuild;
-        window.DialogExtensionMenuBuild = function() {
-            oldFunc.call(this);
-            const content = document.getElementById("DialogExtensionMenuContent");
-            if (content && !document.getElementById("GlowAddonButton")) {
-                button.id = "GlowAddonButton";
-                content.appendChild(button);
-            }
-        };
-    }
+			const content = document.getElementById("DialogExtensionMenuContent");
+			if (!content) return;
+
+			// Avoid adding it multiple times
+			if (document.getElementById("GlowAddonButton")) return;
+
+			const button = document.createElement("button");
+			button.id = "GlowAddonButton";
+			button.innerText = "Activate Glow ✨";
+			button.style.marginTop = "10px";
+			button.addEventListener("click", () => {
+				alert("Glow activated! 🌟");
+			});
+
+			content.appendChild(button);
+			console.log("[Glow Addon] Glow button added to Extensions menu");
+		};
+	}
 }, 500);
