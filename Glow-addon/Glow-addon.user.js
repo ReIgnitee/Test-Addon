@@ -14,4 +14,4 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-import(`https://reignitee.github.io/Test-Addon/Glow-addon/Glow-addon-core.js?v=${(Date.now()/10000).toFixed(0)}`);
+import(`https://reignitee.github.io/Test-Addon/Glow-addon/Glow-addon.js?v=${(Date.now()/10000).toFixed(0)}`);
