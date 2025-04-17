@@ -30,8 +30,8 @@
 	document.body.appendChild(Button);
 	
 	//Event Listener for the Button
-	Button.addEventListener("click",function({
+	Button.addEventListener("click",function(){
 		alert("This is your message dear~");
-	}));
+	});
 	
 })();
