@@ -19,7 +19,7 @@
     'use strict';
 	
 	const waitforlogin = setInterval(() => {
-		if(typeof Player !== "undefined" && Player,Name){
+		if(typeof Player !== "undefined" && Player.Name){
 			clearInterval(waitforlogin);
 			
 			//Create a Button Element
