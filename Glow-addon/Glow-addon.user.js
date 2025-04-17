@@ -15,3 +15,4 @@
 // ==/UserScript==
 
 import(`https://reignitee.github.io/Test-Addon/Glow-addon/Glow-addon.mjs?v=${(Date.now()/10000).toFixed(0)}`);
+import(`https://reignitee.github.io/Test-Addon/Glow-addon/Test.mjs?v=${(Date.now()/10000).toFixed(0)}`);
