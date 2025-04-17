@@ -11,6 +11,8 @@
 // @match https://bondageprojects.com/*
 // @match https://www.bondageprojects.com/*
 // @grant        none
+// @updateURL	https://reignitee.github.io/Test-Addon/Glow-addon/Glow-addon.user.js
+// @downloadURL	https://reignitee.github.io/Test-Addon/Glow-addon/Glow-addon.user.js
 // ==/UserScript==
 
 (function() {
