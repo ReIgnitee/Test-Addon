@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bondage Club Glow Addon
-// @namespace    https://reignitee.gitlab.io/
+// @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Testing Purposes
 // @author       ReIgnite
