@@ -1,16 +1,15 @@
 // ==UserScript==
-// @name         Bondage Club Chaos Loader
-// @namespace    https://furryzoi.gitlab.io/
+// @name         Bondage Club Glow Addon
+// @namespace    https://reignitee.gitlab.io/
 // @version      1.0
-// @description  Loads the Bondage Club Chaos addon script as a module.
-// @author       You
+// @description  Testing Purposes
+// @author       ReIgnite
 // @match https://bondageprojects.elementfx.com/*
 // @match https://www.bondageprojects.elementfx.com/*
 // @match https://bondage-europe.com/*
 // @match https://www.bondage-europe.com/*
 // @match https://bondageprojects.com/*
 // @match https://www.bondageprojects.com/*
-// @match        http://localhost:*/*
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
