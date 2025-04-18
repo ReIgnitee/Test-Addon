@@ -6,20 +6,30 @@
 		if(typeof Player !== "undefined" && Player.Name){
 			clearInterval(checklogin);
 			
-			const profile = document.getElementById("OnlineProfile") || document.getElementById("PlatformProfile");
+			const originalOnlineProfileRun = OnlineProfileRun;
 
-			
-			if(profile){
-				const button = document.createElement("button");
-				button.style.padding = '20px';
-				button.style.marginTop = '10px';
-				button.innerText = "Click Me!";
-				button.onclick = () => alert("Hooray! It work!");
-				
-				profile.appendChild(button);
-			}else{
-				console.warn("Profile element not found!");
-			}
+			let buttonAdded = false;
+
+			OnlineProfileRun = function () {
+				// Call the original function first
+				originalOnlineProfileRun();
+
+				if (!buttonAdded) {
+					const profile = document.getElementById("OnlineProfile") || document.getElementById("PlatformProfile");
+
+					if (profile) {
+						const Button = document.createElement("button");
+						Button.style.padding = '10px';
+						Button.style.margin = '10px';
+						Button.innerText = "Addon Settings";
+						Button.onclick = () => alert("This is the Addon Settings button!");
+
+						profile.appendChild(Button);
+						buttonAdded = true;
+					}
+				}
+			};
+
 		}
 	},500);
 })();
