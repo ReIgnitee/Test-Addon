@@ -37,7 +37,7 @@
     }
 
     // Import UI and Scripts dynamically
-    const baseURL = 'https://reignitee.github.io/Test-addon/'; // Change this to your GitHub Pages URL
+    const baseURL = 'https://reignitee.github.io/Test-Addon/'; // Change this to your GitHub Pages URL
     importCSS(baseURL + 'UI/styles.css');
     importJS(baseURL + 'Scripts/button-handler.js');
 
