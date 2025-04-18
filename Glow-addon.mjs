@@ -2,15 +2,15 @@
 	'use strict';
 
 	console.log("Glow Addon is active!");
-	const checklogin = setInterval((){
+	const checklogin = setInterval(() => {
 		if(typeof Player !== "undefined" && Player.Name){
 			clearInterval(checklogin);
 			
-			const profile = document,getElementById("profile");
+			const profile = document.getElementById("OnlineProfile");
 			
 			if(profile){
-				Button = document.createElement("Button");
-				Button.padding = '20px';
+				const Button = document.createElement("button");
+				Button.style.padding = '20px';
 				Button.top = '20px';
 				Button.left = '20px';
 				Button.innerText = "Click Me!";
