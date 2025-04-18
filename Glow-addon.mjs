@@ -10,14 +10,13 @@
 
 			
 			if(profile){
-				const Button = document.createElement("button");
-				Button.style.padding = '20px';
-				Button.top = '20px';
-				Button.left = '20px';
-				Button.innerText = "Click Me!";
-				Button.onclick = () => alert("Hooray! It work!");
+				const button = document.createElement("button");
+				button.style.padding = '20px';
+				button.style.marginTop = '10px';
+				button.innerText = "Click Me!";
+				button.onclick = () => alert("Hooray! It work!");
 				
-				profile.appendChild(Button);
+				profile.appendChild(button);
 			}else{
 				console.warn("Profile element not found!");
 			}
