@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('addonButton');
     
     if (button) {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', () => {
             alert('Button clicked!'); // Example action
         });
     }

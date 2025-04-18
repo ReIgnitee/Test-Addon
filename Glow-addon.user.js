@@ -43,17 +43,26 @@
 
     // Load the HTML dynamically
     function loadHTML() {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', baseURL + 'UI/button.html', true);
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                const container = document.createElement('div');
-                container.innerHTML = xhr.responseText;
-                document.body.appendChild(container);
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', baseURL + 'UI/button.html', true);
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const container = document.createElement('div');
+            container.innerHTML = xhr.responseText;
+            document.body.appendChild(container);
+
+            // Add click event here (safer timing)
+            const button = document.getElementById('myAddonButton');
+            if (button) {
+                button.addEventListener('click', () => {
+                    alert("Button clicked!");
+                });
             }
-        };
-        xhr.send();
-    }
+        }
+    };
+    xhr.send();
+}
+
 
     // Wait for the page to load, then inject everything
     window.addEventListener('load', () => {
