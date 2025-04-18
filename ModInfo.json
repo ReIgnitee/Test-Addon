@@ -1,0 +1,14 @@
+{
+    "name": "Practice Addon",
+    "version": "1.0",
+    "author": "Your Name",
+    "description": "A practice mod for adding a button.",
+    "tags": ["UI", "button"],
+    "ui": [
+        "UI/button.html",
+        "UI/styles.css"
+    ],
+    "scripts": [
+        "Scripts/button-handler.js"
+    ]
+}
