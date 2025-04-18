@@ -1,5 +1,25 @@
 (function() {
 	'use strict';
 
-	console.log("Hello World");
+	console.log("Glow Addon is active!");
+	const checklogin = setInterval((){
+		if(typeof Player !== "undefined" && Player.Name){
+			clearInterval(checklogin);
+			
+			const profile = document,getElementById("Profile");
+			
+			if(profile){
+				Button = document.createElement("Button");
+				Button.padding = '20px';
+				Button.top = '20px';
+				Button.left = '20px';
+				Button.innerText = "Click Me!";
+				Button.onclick = () => alert("Hooray! It work!");
+				
+				profile.appendChild(Button);
+			}else{
+				console.warn("Profile element not found!");
+			}
+		}
+	},500);
 })();
