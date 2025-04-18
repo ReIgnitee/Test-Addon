@@ -1,5 +1,5 @@
 (function() {
-	'use script';
+	'use strict';
 
 	console.log("Hello World");
 })();
