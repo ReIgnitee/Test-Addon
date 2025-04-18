@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"lib": ["DOM", "ESNext"],
+		"types": [],
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"baseUrl": "./src",
+		"outDir": "./dist",
+		"declaration": true,
+		"declarationDir": "./types",
+		"removeComments": false,
+		"strict": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true
+	},
+	"include": ["./src/**/*"]
+}
