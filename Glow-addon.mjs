@@ -6,7 +6,8 @@
 		if(typeof Player !== "undefined" && Player.Name){
 			clearInterval(checklogin);
 			
-			const profile = document.getElementById("OnlineProfile");
+			const profile = document.getElementById("OnlineProfile") || document.getElementById("PlatformProfile");
+
 			
 			if(profile){
 				const Button = document.createElement("button");
